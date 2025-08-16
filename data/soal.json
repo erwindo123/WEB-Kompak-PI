@@ -1,0 +1,197 @@
+[
+  {
+    "pertanyaan": "Choose the correct sentence:",
+    "pilihan": [
+      "She don’t like coffee.",
+      "She doesn’t likes coffee.",
+      "She doesn’t like coffee.",
+      "She don’t likes coffee."
+    ],
+    "jawaban": "She doesn’t like coffee."
+  },
+  {
+    "pertanyaan": "Which word is a noun?",
+    "pilihan": ["Quickly", "Beautiful", "Happiness", "Run"],
+    "jawaban": "Happiness"
+  },
+  {
+    "pertanyaan": "Which one is grammatically correct?",
+    "pilihan": [
+      "He go to school every day.",
+      "He goes to school every day.",
+      "He gone to school every day.",
+      "He going to school every day."
+    ],
+    "jawaban": "He goes to school every day."
+  },
+  {
+    "pertanyaan": "What is the past tense of 'eat'?",
+    "pilihan": ["Eated", "Ate", "Eats", "Eating"],
+    "jawaban": "Ate"
+  },
+  {
+    "pertanyaan": "Complete the sentence: They ____ playing football.",
+    "pilihan": ["is", "am", "are", "be"],
+    "jawaban": "are"
+  },
+  {
+    "pertanyaan": "Which sentence is correct?",
+    "pilihan": [
+      "I has a book.",
+      "I have a book.",
+      "I haves a book.",
+      "I am have a book."
+    ],
+    "jawaban": "I have a book."
+  },
+  {
+    "pertanyaan": "What is the synonym of 'happy'?",
+    "pilihan": ["Sad", "Angry", "Joyful", "Cry"],
+    "jawaban": "Joyful"
+  },
+  {
+    "pertanyaan": "She ____ to the gym every morning.",
+    "pilihan": ["go", "goes", "going", "gone"],
+    "jawaban": "goes"
+  },
+  {
+    "pertanyaan": "What is the opposite of 'cold'?",
+    "pilihan": ["Hot", "Cool", "Freeze", "Icy"],
+    "jawaban": "Hot"
+  },
+  {
+    "pertanyaan": "Which one is a question?",
+    "pilihan": [
+      "You are fine.",
+      "Are you fine?",
+      "You is fine.",
+      "Fine you are."
+    ],
+    "jawaban": "Are you fine?"
+  },
+  {
+    "pertanyaan": "Choose the correct preposition: The book is ___ the table.",
+    "pilihan": ["on", "in", "at", "to"],
+    "jawaban": "on"
+  },
+  {
+    "pertanyaan": "What is the plural form of 'child'?",
+    "pilihan": ["childs", "childes", "children", "childrens"],
+    "jawaban": "children"
+  },
+  {
+    "pertanyaan": "Which sentence is in the past tense?",
+    "pilihan": [
+      "She walks to school.",
+      "She will walk to school.",
+      "She walked to school.",
+      "She is walking to school."
+    ],
+    "jawaban": "She walked to school."
+  },
+  {
+    "pertanyaan": "Choose the correct form: He ____ a policeman.",
+    "pilihan": ["am", "is", "are", "be"],
+    "jawaban": "is"
+  },
+  {
+    "pertanyaan": "What is the antonym of 'strong'?",
+    "pilihan": ["Weak", "Tall", "Fast", "Smart"],
+    "jawaban": "Weak"
+  },
+  {
+    "pertanyaan": "Complete the sentence: We ____ finished our homework.",
+    "pilihan": ["have", "has", "had", "having"],
+    "jawaban": "have"
+  },
+  {
+    "pertanyaan": "Which one is an adjective?",
+    "pilihan": ["Quickly", "Quick", "Run", "Speed"],
+    "jawaban": "Quick"
+  },
+  {
+    "pertanyaan": "What is the correct question form?",
+    "pilihan": [
+      "He is your friend?",
+      "Is he your friend?",
+      "Your friend is he?",
+      "Friend is he your?"
+    ],
+    "jawaban": "Is he your friend?"
+  },
+  {
+    "pertanyaan": "Select the correct spelling:",
+    "pilihan": ["Recieve", "Receive", "Receeve", "Receve"],
+    "jawaban": "Receive"
+  },
+  {
+    "pertanyaan": "Which one is a verb?",
+    "pilihan": ["Walk", "Walker", "Walking", "Walked"],
+    "jawaban": "Walk"
+  },
+  {
+    "pertanyaan": "Choose the correct sentence:",
+    "pilihan": [
+      "They is happy.",
+      "They are happy.",
+      "They am happy.",
+      "They be happy."
+    ],
+    "jawaban": "They are happy."
+  },
+  {
+    "pertanyaan": "Fill in the blank: He has been working here ____ 2015.",
+    "pilihan": ["since", "for", "from", "at"],
+    "jawaban": "since"
+  },
+  {
+    "pertanyaan": "Which sentence uses the future tense?",
+    "pilihan": [
+      "She eats dinner.",
+      "She is eating dinner.",
+      "She will eat dinner.",
+      "She ate dinner."
+    ],
+    "jawaban": "She will eat dinner."
+  },
+  {
+    "pertanyaan": "What is the past participle of 'go'?",
+    "pilihan": ["goed", "went", "goes", "gone"],
+    "jawaban": "gone"
+  },
+  {
+    "pertanyaan": "Which word is a conjunction?",
+    "pilihan": ["And", "But", "Because", "All of the above"],
+    "jawaban": "All of the above"
+  },
+  {
+    "pertanyaan": "What is the superlative form of 'good'?",
+    "pilihan": ["Better", "More good", "Best", "Goodest"],
+    "jawaban": "Best"
+  },
+  {
+    "pertanyaan": "Identify the interrogative sentence:",
+    "pilihan": [
+      "She can drive.",
+      "Can she drive?",
+      "She drive can.",
+      "Driving she can."
+    ],
+    "jawaban": "Can she drive?"
+  },
+  {
+    "pertanyaan": "Choose the correct article: He is ___ honest man.",
+    "pilihan": ["a", "an", "the", "none"],
+    "jawaban": "an"
+  },
+  {
+    "pertanyaan": "Which word is an adverb?",
+    "pilihan": ["Run", "Quick", "Quickly", "Runner"],
+    "jawaban": "Quickly"
+  },
+  {
+    "pertanyaan": "Select the correct form: She has ___ her keys.",
+    "pilihan": ["lose", "lost", "loses", "losing"],
+    "jawaban": "lost"
+  }
+]

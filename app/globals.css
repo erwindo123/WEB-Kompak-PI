@@ -1,0 +1,593 @@
+/* =================================
+   ROOT VARIABLES & GLOBAL RESET
+================================= */
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+  --white: #ffffff;
+  --light-gray: #ccc;
+  --success: #4caf50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--white);
+  min-height: 100vh;
+}
+
+/* =================================
+   NAVBAR
+================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #515151;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--white);
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar .navbar-nav a {
+  font-size: 1.4rem;
+  color: var(--white);
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.2s linear;
+  transform-origin: center;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  margin-left: 1rem;
+  color: var(--white);
+}
+
+.navbar .navbar-extra a i {
+  stroke: var(--white);
+}
+
+/* =================================
+   HERO SECTION
+================================= */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url("/img/Header-bg.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+  z-index: 0;
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: var(--white);
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* =================================
+   ABOUT SECTION
+================================= */
+.about {
+  padding: 10rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  color: var(--white);
+}
+
+.about h2 span,
+.menu h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+  color: var(--white);
+}
+
+/* =================================
+   MENU SECTION
+================================= */
+.menu h2 {
+  margin-bottom: 1rem;
+}
+
+.menu p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1;
+  color: var(--white);
+}
+
+.menu ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.menu ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* =================================
+   ENGLISH SECTION
+================================= */
+.english-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.english-section .intro,
+.english-section .closing {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.english-section .highlight {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.english-section ul.english-list {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.english-section ul.english-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.english-section strong {
+  color: var(--primary);
+}
+/* =================================
+   FORM NAMA
+================================= */
+#input-nama-container {
+  background: url("/img/gambar-new.jpg") center / cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-nama {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-nama label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.form-nama input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 300px;
+  margin-bottom: 15px;
+}
+
+.form-nama button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-nama button:hover {
+  background-color: #a3774f;
+}
+
+/* =================================
+   QUIZ
+================================= */
+#quiz-container {
+  max-width: 100%;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: rgba(34, 34, 34, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+#quiz-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: var(--white);
+}
+
+#quiz-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+button#next-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button#next-btn:hover {
+  background-color: #a1764f;
+}
+
+/* Timer */
+#timer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* =================================
+   HASIL KUIS
+================================= */
+#hasil-container {
+  background: url("/img/gambar-2.jpg") center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hasil-card {
+  background-color: var(--white);
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.hasil-card h2 {
+  margin-bottom: 12px;
+  color: var(--success);
+}
+
+.hasil-card p {
+  margin: 8px 0;
+  font-size: 1.1em;
+}
+
+.hasil-card button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: var(--success);
+  color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hasil-card button:hover {
+  background-color: #45a049;
+}
+
+/* Tombol Home */
+button#home-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#home-btn:hover {
+  background-color: #a3774f;
+}
+
+/* =================================
+   MEDIA QUERIES
+================================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  #quiz-container {
+    margin: 120px 20px;
+    padding: 20px;
+  }
+
+  #input-nama-container,
+  #hasil-container {
+    padding: 20px;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+    padding-top: 2rem;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    margin: 1.5rem;
+    padding: 0 5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  #quiz-container {
+    margin: 140px 10px;
+    padding: 15px;
+  }
+}
+/* =================================
+   ICON FEATHER UNTUK NAVBAR
+================================= */
+.navbar-extra a i {
+  stroke: var(--white);
+  width: 28px;
+  height: 28px;
+}
+/* Input Nama */
+#input-nama-container {
+  background: url("/img/gambar-new.jpg") center / cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-nama h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-nama button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #b6895b;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-nama button:hover {
+  background-color: #a3774f;
+}
+
+/* Quiz */
+#quiz-container {
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #222;
+  border-radius: 20px;
+  color: #fff;
+}
+
+/* font button */
+#quiz-container .option-button {
+  color: #111;
+}
+
+#quiz-container h2 {
+  margin-bottom: 15px;
+}
+
+#quiz-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#next-btn {
+  padding: 10px 20px;
+  background-color: #b6895b;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.next-button {
+  margin-left: 16px;
+}
+#next-btn:hover {
+  background-color: #a3774f;
+}
+
+/* Hasil */
+
+#quiz-container {
+  background: url("/img/gambar-2.jpg") center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hasil-container {
+  background: url("/img/gambar-2.jpg") center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hasil-card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+#home-btn {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#home-btn:hover {
+  background-color: #45a049;
+}
