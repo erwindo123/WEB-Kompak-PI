@@ -3,29 +3,8 @@
 import { useState, useEffect } from "react";
 import type { MouseEvent } from "react"; // Mengimpor tipe MouseEvent secara spesifik
 
-// PENTING: Import feather-icons untuk efek sampingnya (biasanya menambahkan 'feather' ke objek window global)
-import "feather-icons";
-
-// PENTING: Mendeklarasikan objek 'feather' di window agar TypeScript mengenalinya
-// Ini diperlukan karena feather-icons tidak menyediakan tipe default export yang standar
-declare global {
-  interface Window {
-    feather: {
-      replace: () => void;
-    };
-  }
-}
-
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    // Jalankan feather.replace() hanya di client-side
-    // Pastikan window dan window.feather ada sebelum memanggil replace()
-    if (typeof window !== "undefined" && window.feather) {
-      window.feather.replace();
-    }
-  }, []);
 
   // Fungsi untuk mengubah state menu saat ikon diklik
   // Menggunakan tipe MouseEvent<HTMLAnchorElement> langsung
@@ -41,6 +20,84 @@ export default function Home() {
 
   return (
     <>
+      <style jsx>{`
+        /* Hanya CSS untuk navbar mobile - minimal changes */
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.4rem 7%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 9999;
+          background-color: rgba(1, 1, 1, 0.8);
+        }
+
+        .navbar-logo {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .navbar-logo span {
+          color: #b6895b;
+        }
+
+        .navbar-nav {
+          display: flex;
+        }
+
+        .navbar-nav a {
+          color: #fff;
+          margin: 0 1rem;
+          text-decoration: none;
+          font-size: 1.3rem;
+        }
+
+        .navbar-extra a {
+          color: #fff;
+          font-size: 1.5rem;
+          text-decoration: none;
+        }
+
+        #hamburger-menu {
+          display: none;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+          #hamburger-menu {
+            display: block;
+          }
+
+          .navbar-nav {
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            background-color: rgba(1, 1, 1, 0.9);
+            width: 30rem;
+            height: 100vh;
+            flex-direction: column;
+            transition: 0.3s;
+            padding: 2rem;
+          }
+
+          .navbar-nav.active {
+            right: 0;
+          }
+
+          .navbar-nav a {
+            display: block;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            font-size: 2rem;
+          }
+        }
+      `}</style>
+
       {/* Navbar Start */}
       <nav className="navbar">
         <a href="#" className="navbar-logo">
@@ -69,8 +126,7 @@ export default function Home() {
         <div className="navbar-extra">
           {/* Tambahkan `onClick` handler ke tautan untuk membuka/menutup menu */}
           <a href="#" id="hamburger-menu" onClick={toggleMenu}>
-            {/* The <i> tag will be replaced by feather-icons jika dimuat dengan benar */}
-            <i data-feather="menu"></i>
+            ☰
           </a>
         </div>
       </nav>
